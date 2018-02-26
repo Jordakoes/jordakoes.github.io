@@ -1,39 +1,54 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
     <link href="style.css" rel="stylesheet">
+    <link href="base.css" rel="stylesheet">
   </head>
   <body>
-      <div class="main">
-        <h1>Hello <br> I am Jordi, <br> a Healthcare student based in The Netherlands.</h1>
-        <p>Pushing commits to GitHub. If you can read this, it's working, Yay me!</p>
-      </div>  
+    <div class="container">
+      <div class="top">
+        <div class="main">
+          <h1>Hello <br> I am Jordi, <br> a Healthcare student based in The Netherlands.</h1>
+          <p>Pushing commits to GitHub. If you can read this, it's working, Yay me!</p>
+        </div>  
 
-      <div class= "twitter">
-        <a href="https://twitter.com/jordiinl?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @jordiinl</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class= "twitter">
+          <a href="https://twitter.com/jordiinl?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @jordiinl</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+        <div class= "form">
+          <form action="https://formspree.io/hovenjordi@gmail.com"
+        method="POST">
+
+            <ul class="form-style-1">
+                <li><label>Your Name Goes Here <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="First" />&nbsp;<input type="text" name="field2" class="field-divided" placeholder="Last" /></li>
+                <li>
+                    <label>Enter your email  <span class="required">*</span></label>
+                    <input type="email" name="field3" class="field-long" />
+                </li>
+                <li>
+                    <label>Write your message <span class="required">*</span></label>
+                    <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+                </li>
+                <li>
+                    <input type="submit" value="Click me to submit!" />
+                </li>
+            </ul>
+          </form>
+        </div>
+        <div class="text">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet placeat sapiente asperiores ipsum ipsam inventore quaerat voluptates soluta nobis nihil voluptatum nam harum, aliquam laboriosam exercitationem ex fuga vitae veniam dolorum totam! Totam repudiandae enim veritatis qui optio ratione dolor deleniti voluptate odio dolore rerum recusandae incidunt fuga voluptas, animi ex sit natus laboriosam minus a odit unde quam minima.</p>
+        </div>
+
+        <footer class="ft">
+          <p>Works great like this...</p>
+        </footer>
       </div>
-
-      <div class= "form">
-        <form action="https://formspree.io/hovenjordi@gmail.com"
-       method="POST">
-
-          <ul class="form-style-1">
-              <li><label>Your Name Goes Here <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="First" />&nbsp;<input type="text" name="field2" class="field-divided" placeholder="Last" /></li>
-              <li>
-                  <label>Enter your email  <span class="required">*</span></label>
-                  <input type="email" name="field3" class="field-long" />
-              </li>
-              <li>
-                  <label>Write your message <span class="required">*</span></label>
-                  <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
-              </li>
-              <li>
-                  <input type="submit" value="Click me to submit!" />
-              </li>
-          </ul>
-        </form>
-      </div>
+    </div>
   </body>
-
 </html> 
+
+<!-- When this code is added in the "ft" paragraph the layout messes up in firefox... 
+<p>Made with <span class="love">♥</span> in the Netherlands</p>
+<p>Proudly hosted on <a href="https://www.github.com" target="_blank">GitHub</a>. Source Code Repo on <a href="https://github.com/Jordakoes/Jordakoes.github.io" target="_blank">Github</p>
