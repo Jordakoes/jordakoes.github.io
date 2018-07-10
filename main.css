@@ -7,7 +7,7 @@ body {
     margin: 0;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 300px repeat(auto-fill, 100px) ;
+    grid-template-rows: 200px 100px 100px 100px 300px 100px;
     font-family: 'Montserrat', sans-serif;
     grid-template-areas:
         "mainmid"
