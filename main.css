@@ -1,25 +1,22 @@
 
 body, html {
     height: 100vh;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
     margin: 0;
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 200px 100px 100px 100px 300px 100px;
-    font-family: 'Montserrat', sans-serif;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 80% 50% 35% 35% 35% 20%;
     grid-template-areas:
-        "mainmid"
-        "instagram"
-        "facebook"
-        "snapchat"
-        "spotmid"
-        "footermid"
-        ;
+        "mainleft       mainmid         mainright"
+        "spotleft       spotmid         spotright"
+        "instagram      instagram       instagram"
+        "facebook       facebook        facebook"
+        "snapchat       snapchat        snapchat"
+        "footerleft     footermid       footerright";
 }
-
-
 
 instagram {
     grid-area: instagram;
@@ -56,7 +53,7 @@ spotifymid h1{
     display: grid;
     max-width: 100%;
     width: 100%;
-    height: 70%;
+    height: 30%;
 }    
 
 spotifyright {
@@ -110,4 +107,12 @@ footerright {
             "instagram      facebook        snapchat"
             "footerleft     footermid       footerright";
     }
+
+    .widget {
+        display: grid;
+        max-width: 100%;
+        width: 100%;
+        height: 70%;
+    } 
+
 }
