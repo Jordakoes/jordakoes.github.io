@@ -21,14 +21,76 @@ body {
     margin: 0;
     display: grid;
     grid-template-columns: 20% 1fr 20%;
-    grid-template-rows: 80% 35% 38% 38% 38% 15%;
+    grid-template-rows: auto 80% 35% 38% 38% 38% 15%;
     grid-template-areas:
+        "headerleft     header          headerright"
         "mainleft       mainmid         mainright"
         "spotleft       spotmid         spotright"
         "instaleft      instamid        instaright"
         "faceleft       facemid         faceright"
         "snapleft       snapmid         snapright"
         "footerleft     footermid       footerright";
+}
+
+/* Header */
+headerleft {
+    grid-area: headerleft;
+    background-color: #cf4647;
+}
+
+header {
+    grid-area: header;
+    background-color: #cf4647;
+}
+
+header img {
+    float: left;
+    display: grid; 
+    align-items: start;
+    width: 65px;
+    height: 65px;
+    padding: 13px 0px;
+}
+
+headerright { 
+    grid-area: headerright;
+    background-color: #cf4647;
+}
+
+/* Menu */
+.nav{
+    margin:0;
+    padding:30px 0px;
+    text-align: end;
+}
+/*  top padding is 25px
+    right padding is 50px
+    bottom padding is 75px
+    left padding is 100px */
+.nav li{
+    display:inline;
+    padding: 0px 0px 0px 8px;
+}
+.nav a{
+    display:inline-block;
+}
+ 
+/* Main */
+mainleft {
+    grid-area: mainleft;
+    background-color: #cf4647;
+}
+mainmid {
+    grid-area: mainmid;
+    display: grid; 
+    background-color: #cf4647;
+    align-content: center;
+    color: white;
+}
+
+mainright {
+    grid-area: mainright;
+    background-color: #cf4647;
 }
 
 /* Instagram */
@@ -106,38 +168,21 @@ spotifyright {
     background-color: #1db954;
 }
 
-/* Main */
-mainleft {
-    grid-area: mainleft;
-    background-color: #7DA9D5;
-}
-mainmid {
-    grid-area: mainmid;
-    display: grid; 
-    background-color: #7DA9D5;
-    align-content: center;
-}
-
-mainright {
-    grid-area: mainright;
-    background-color: #7DA9D5;
-}
-
 /* Footer */
 footerleft {
     grid-area: footerleft;
-    background-color: black;
+    background-color: #cf4647;
 }
 
 footermid {
     grid-area: footermid;
-    background-color: black;
+    background-color: #cf4647;
     color: white;
 }
 
 footerright {
     grid-area: footerright;
-    background-color: black;
+    background-color: #cf4647;
 }
 
 @media only screen and (min-width: 768px) {
@@ -146,11 +191,12 @@ footerright {
         margin: 0;
         display: grid;
         grid-template-columns: 20% 1fr 20%;
-        grid-template-rows: 80% 75% 50% 8%;
+        grid-template-rows: auto 80% 75% 50% 8%;
         grid-template-areas:
+            "headerleft     header          headerright"
             "mainleft       mainmid         mainright"
             "spotleft       spotmid         spotright"
-            "instamid      facemid        snapmid"
+            "instamid       facemid         snapmid"
             "footerleft     footermid       footerright";
     }
     /* Resizing the spotify widget for web view */
@@ -164,4 +210,5 @@ footerright {
     mainmid h1 {
         font-size: 70px;
     }
+
 }
