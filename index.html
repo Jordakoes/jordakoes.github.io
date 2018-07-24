@@ -1,67 +1,68 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Portfolio</title>
     <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet"> 
-
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <title>My Website</title>
 </head>
+
 <body>
-    <headerleft></headerleft>
-    <header> 
-        
-        <img src="/images/gulp-white-text.svg">   
-        <ul class="nav">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">PORTFOLIO</a></li>
-                <li><a href="#">CONTACT</a></li>
-                <li><a href="#">NOGIETS</a></li>
-        </ul>
+    <div class="container">
+        <div class="intro">
+            <h1>Hi, I'm Jordi Hoven</h1>
+            <h2>Wow, check out this cool <br> illustration over there!</h2>
+        </div>
 
-    </header>
-    <headerright></headerright>
+        <div class="illustration1">
+            <img class="image" src="images/languages.svg" alt="Android" border="0">
+        </div>
 
-    <mainleft></mainleft>
-    <mainmid>
-        <h1>JORDI HOVEN</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur odit fugit placeat enim dicta, natus deserunt itaque distinctio! Quos, provident?</p>
-    </mainmid>
-    <mainright></mainright>
 
-    <spotifyleft></spotifyleft>
-    <spotifymid>
-        <h1>SPOTIFY</h1>
-        <iframe class="widget" src="https://open.spotify.com/embed/user/man-hing/playlist/6Qn04I3SvYAUtV1uQ0CyeD" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </spotifymid>
-    <spotifyright></spotifyright>
+        <div class="ideas">
+            <h1>Often I have the best Ideas</h1>
+            <h2>But I lacked the tools to create something amazing :(</h2>
+        </div>
 
-    <instagramleft></instagramleft>
-    <instagrammid>
-        <h1>INSTAGRAM</h1>
-    </instagrammid>
-    <instagramright></instagramright>
 
-    <facebookleft></facebookleft>
-    <facebookmid>
-        <h1>FACEBOOK</h1>
-    </facebookmid>
-    <facebookright></facebookright>
+        <div class="illustration2">
+            <img class="image" src="images/ideas.svg" alt="Ideas" border="0">
+        </div>
 
-    <snapchatleft></snapchatleft>
-    <snapchatmid>
-        <h1>SNAPCHAT</h1>
-    </snapchatmid>
-    <snapchatright></snapchatright>
+        <div class="coding">
+            <h1>So I started learning HTML and CSS</h1>
+            <h2>And I am using this website to show my skills</h2>
+        </div>
 
-    <footerleft></footerleft>
-    <footermid>
-        <p>Made with love in The Netherlands <br> source on GitHub</p>
-    </footermid>
-    <footerright></footerright>
+
+        <div class="illustration3">
+            <img class="image" src="images/coding.svg" alt="Coding" border="0">
+        </div>
+    </div>
     
+<!-- Took the socials div out of the container to center it with flexbox -->
+    <div class="socials">
+        <div class="codepen">
+            <i class="fab fa-codepen fa-5x"></i>
+            <p>CodePen</p>
+        </div>
+        <div class="github">
+            <i class="fab fa-github fa-5x"></i>
+            <p>GitHub</p>
+        </div>
+        <div class="instagram">
+            <i class="fab fa-instagram fa-5x"></i>
+            <p>Instagram</p>
+          </div>
+    </div>
+
+    <footer>
+        <p>Hosted on <a href="https://github.com">GitHub</a>, made with <span class="heart">❤</span> in The Netherlands. Licences page  <A HREF="pages/license.html">click here</A></p>
+    </footer>
+
 </body>
+
 </html>

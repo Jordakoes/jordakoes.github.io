@@ -1,214 +1,233 @@
-
-/* Setting font family, and viewports for entire project */
+/* Some resets */
 body, html {
-    height: 100vh;
-    font-family: 'Montserrat', sans-serif;
-    /* Keyframe animation */
-    animation: yourAnimation 1s forwards 0s ease;
-}
-
-/* Keyframe animation */
-@keyframes yourAnimation{ 
-    0%{ 
-        transform: rotate(0) translateY(10%); opacity: 0; } 
-        100%{ 
-            transform: rotate(0) translateY(0); opacity: 1; 
-        } 
-    }
-
-/* Grid area for mobile view */
-body {
     margin: 0;
-    display: grid;
-    grid-template-columns: 20% 1fr 20%;
-    grid-template-rows: auto 80% 35% 38% 38% 38% 15%;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Container of grid areas */
+.container { 
+    display: grid; 
+    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 20px;
     grid-template-areas:
-        "headerleft     header          headerright"
-        "mainleft       mainmid         mainright"
-        "spotleft       spotmid         spotright"
-        "instaleft      instamid        instaright"
-        "faceleft       facemid         faceright"
-        "snapleft       snapmid         snapright"
-        "footerleft     footermid       footerright";
+    ".  intro            illustration1       ."
+    ".  illustration2    ideas               ."
+    ".  coding           illustration3       .";
 }
 
-/* Header */
-headerleft {
-    grid-area: headerleft;
-    background-color: #cf4647;
+/* Grid areas */
+.intro {
+    grid-area: intro;
+    justify-self: start;
+    align-self: center;
 }
 
-header {
-    grid-area: header;
-    background-color: #cf4647;
+.illustration1 {
+    grid-area: illustration1;
+    justify-self: center;
+    align-self: center;
 }
 
-header img {
-    float: left;
-    display: grid; 
-    align-items: start;
-    width: 65px;
-    height: 65px;
-    padding: 13px 0px;
+.image {
+    height: 500px;
+    width: 500px;
 }
 
-headerright { 
-    grid-area: headerright;
-    background-color: #cf4647;
+.ideas {
+    grid-area: ideas;
+    justify-self: center;
+    align-self: center;
+
+    text-align: right;
 }
 
-/* Menu */
-.nav{
-    margin:0;
-    padding:30px 0px;
-    text-align: end;
-}
-/*  top padding is 25px
-    right padding is 50px
-    bottom padding is 75px
-    left padding is 100px */
-.nav li{
-    display:inline;
-    padding: 0px 0px 0px 8px;
-}
-.nav a{
-    display:inline-block;
-}
- 
-/* Main */
-mainleft {
-    grid-area: mainleft;
-    background-color: #cf4647;
-}
-mainmid {
-    grid-area: mainmid;
-    display: grid; 
-    background-color: #cf4647;
-    align-content: center;
-    color: white;
+.illustration2 {
+    grid-area: illustration2;
+    justify-self: center;
+    align-self: center;
 }
 
-mainright {
-    grid-area: mainright;
-    background-color: #cf4647;
+.illustration3 {
+    grid-area: illustration3;
+    justify-self: center;
+    align-self: center;
 }
 
-/* Instagram */
-instagramleft {
-    grid-area:instaleft;
-    background-color: #e1306c;
+.coding {
+    grid-area: coding;
+    justify-self: start;
+    align-self: center;
 }
 
-instagrammid {
-    grid-area: instamid;
-    background-color: #e1306c;
-}
-
-instagramright {
-    grid-area: instaright;
-    background-color: #e1306c;
-}
-
-/* Facebook */
-facebookleft {
-    grid-area: faceleft;
-    background-color: #3b5998;
-}
-
-facebookmid {
-    grid-area: facemid;
-    background-color: #3b5998;
-}
-
-facebookright {
-    grid-area: faceright;
-    background-color: #3b5998;
-}
-
-/* Snapchat */
-snapchatleft {
-    grid-area: snapleft;
-    background-color: #fffc00;
-}
-
-snapchatmid {
-    grid-area: snapmid;
-    background-color: #fffc00;
-}
-
-snapchatright {
-    grid-area: snapright;
-    background-color: #fffc00;
-}
-
-/* Spotify */
-spotifyleft {
-    grid-area: spotleft;
-    background-color: #1db954;
-}
-spotifymid {
-    grid-area: spotmid;
-    background-color: #1db954;
-}
-
-spotifymid h1{
-    margin-top: 50px;
-    color: white;
-}
-
-.widget {
-    display: grid;
-    max-width: 100%;
+/* Flexbox styled divs */
+.socials {
+    background: #6c63ff;
+    height: 50%;
     width: 100%;
-    height: 30%;
-}    
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
-spotifyright {
-    grid-area: spotright;
-    background-color: #1db954;
+/* Socials divs */
+.codepen {
+    background-color: #0ebeff;
+}
+
+.github {
+    background-color: #181717;
+}
+
+.instagram {
+    background-color: #c13584;
+}
+
+.instagram, .codepen, .github {
+	height: 200px;
+	width: 200px;
+    border-radius: 12px;
+    color:white;
+    /* Center content of the div */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform .3s;
+    margin: 0 50px;
 }
 
 /* Footer */
-footerleft {
-    grid-area: footerleft;
-    background-color: #cf4647;
+footer { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-footermid {
-    grid-area: footermid;
-    background-color: #cf4647;
-    color: white;
+footer a {
+    color: #6c63ff;
+    text-decoration: none;
 }
 
-footerright {
-    grid-area: footerright;
-    background-color: #cf4647;
+footer .heart{
+    color: #6c63ff;
 }
 
-@media only screen and (min-width: 768px) {
-    /* Rearanging the grid areas for web view */
-    body {
-        margin: 0;
-        display: grid;
-        grid-template-columns: 20% 1fr 20%;
-        grid-template-rows: auto 80% 75% 50% 8%;
+/* Hover animation of the social divs */
+.instagram:hover, .github:hover, .codepen:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+/* Smaller screens */
+@media only screen and (max-width: 1100px){
+    .image {
+        height: 200px;
+        width: 200px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 16px;
+    }
+    
+    p {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .instagram, .codepen, .github {
+        margin: 0 20px;
+    }
+
+    .instagram:hover, .github:hover, .codepen:hover {
+        transform: scale(1.1);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+   
+    .instagram, .codepen, .github {
+        height: 150px;
+        width: 150px
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    /* Adjusting the grid areas for mobile view */
+    .container { 
+        display: grid; 
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
         grid-template-areas:
-            "headerleft     header          headerright"
-            "mainleft       mainmid         mainright"
-            "spotleft       spotmid         spotright"
-            "instamid       facemid         snapmid"
-            "footerleft     footermid       footerright";
-    }
-    /* Resizing the spotify widget for web view */
-    .widget {
-        display: grid;
-        max-width: 100%;
-        width: 100%;
-        height: 70%;
-    }
-     /* Resizing the headline for web view */
-    mainmid h1 {
-        font-size: 70px;
+        "intro"
+        "illustration1"
+        "ideas"
+        "illustration2"
+        "coding"
+        "illustration3";
     }
 
+    /* Centering the text */
+    .intro {
+        justify-self: center;
+    }
+
+    .ideas {
+    text-align: center;
+    }
+
+    .ideas h2 {
+        margin: 0 20px;
+    }
+
+    .coding {
+        text-align: center;
+    }
+
+    .coding h1, h2 {
+        margin: 0 20px;
+    }
+
+    .illustration3 {
+        margin-bottom: 20px;
+    }
+
+    /* Fix for awkward look of social divs */
+    .instagram {
+        margin-right: 15px;
+    }
+
+    .codepen {
+        margin-left: 15px;
+    }
+
+    .github {
+        margin: 0 0;
+    }
+
+    .instagram:hover, .github:hover, .codepen:hover {
+        transform: scale(1.0);
+    }
 }
