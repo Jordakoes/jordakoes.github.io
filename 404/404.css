@@ -8,12 +8,13 @@ body, html {
 
 body {
     display: grid;
-    grid-template-columns: auto;
-    grid-auto-rows: auto;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
     justify-items: center;
     align-items: center;
 }
 
 .image {
-
+    width: 800px;
+    height: 600px; 
 }
