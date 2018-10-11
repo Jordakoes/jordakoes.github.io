@@ -37,19 +37,29 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* Pushing the fab-icon down a bit */
+i {
+    margin-top: 15px;
+}
+
 /* Styling the socials */
-#instagram, #codepen, #github, #reddit {
+#instagram, #codepen, #github, #reddit{
     height: 120px;
     width: 120px;
     background-color: #202637;
     border: 3px solid #f2f2f2;
     border-radius: 8px;
     color: #f2f2f2;
+    transition: transform .3s;
+}
+
+.linked {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    transition: transform .3s;
+    text-decoration: none;
+    color: #f2f2f2;
 }
 
 /* Grid areas */
@@ -83,6 +93,7 @@ h1 {
 #instagram:hover, #codepen:hover, #github:hover, #reddit:hover {
     transform: scale(1.2);
     cursor: pointer;
+    background-color: #F02B67;
 }
 
 /* Typewriter styling */
@@ -96,7 +107,7 @@ h1 {
 }
 
 /* Smaller screens */
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 800px) {
     .container { 
     grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
     grid-template-rows: 1fr .5fr .5fr;
