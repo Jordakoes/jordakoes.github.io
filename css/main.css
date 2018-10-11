@@ -33,9 +33,6 @@ h1 {
     display: grid;
     align-self: center;
     justify-self: start;
-}
-
-.socials {
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -48,12 +45,10 @@ h1 {
     border: 3px solid #f2f2f2;
     border-radius: 8px;
     color: #f2f2f2;
-
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
     transition: transform .3s;
 }
 
@@ -90,7 +85,7 @@ h1 {
     cursor: pointer;
 }
 
-/* Typewriter test */
+/* Typewriter styling */
 .Typewriter__wrapper{
     font-weight: bold;
     color: #F02B67;
@@ -100,15 +95,11 @@ h1 {
     display: none;
 }
 
-
 /* Smaller screens */
-
 @media only screen and (max-width: 960px) {
     .container { 
     grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
-    /* grid-template-rows: 1fr .5fr .5fr; */
-    grid-template-rows: 50% 25% 25%;
-    grid-gap: 20px;
+    grid-template-rows: 1fr .5fr .5fr;
     grid-template-areas:
     ". text text ."
     ". instagram codepen ."
@@ -116,38 +107,12 @@ h1 {
     }
 
     h1 {
-        color: #f2f2f2;
-        font-size: 40px;
-    }
-
-    /* Hover animations */
-#instagram:hover, #codepen:hover, #github:hover, #reddit:hover {
-    transform: scale(1.05);
-    }
-
-    .socials {
-        margin-top: 40px;
-        margin-bottom: 40px;
+        font-size: 37px;
         margin-left: 20px;
-        margin-right: 20px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .container { 
-        grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
-        /* grid-template-rows: 1fr .5fr .5fr; */
-        grid-template-rows: 50% 25% 25%;
-        grid-gap: 20px;
-        grid-template-areas:
-        ". text text ."
-        ". instagram codepen ."
-        ". github reddit .";
     }
 
-    h1 {
-        font-size: 29px;
-        margin-left: 20px;
+    #instagram:hover, #codepen:hover, #github:hover, #reddit:hover {
+        transform: scale(1.05);
     }
 
     .socials {
@@ -155,5 +120,11 @@ h1 {
         margin-bottom: 20px;
         margin-left: 20px;
         margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 29px;
     }
 }
