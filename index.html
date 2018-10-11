@@ -4,65 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+    <!-- Personal css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <!-- Fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <title>My Website</title>
-</head>
 
+    <!--TTesting typewriter js on H1 -->
+    <!-- Library loaded here -->
+    <script src="https://unpkg.com/typewriter-effect/dist/core.js"></script>
+    <!-- End testing typewriter js -->
+
+
+
+    <title>Jordi Hoven</title>
+</head>
 <body>
     <div class="container">
-        <div class="intro">
-            <h1>Hi, I'm Jordi Hoven</h1>
-            <h2>Wow, check out this cool <br> illustration over there!</h2>
+        <div class="text">
+            <h1>I'm Jordi Hoven, <br> Product <span id="purple"></span></h1>
         </div>
 
-        <div class="illustration1">
-            <img class="image" src="images/languages.svg" alt="Android" border="0">
+        <div id="instagram" class="socials">
+            <i class="fab fa-instagram fa-3x"></i>
+            <p>Instagram</p>
         </div>
 
-
-        <div class="ideas">
-            <h1>Often I have the best Ideas</h1>
-            <h2>But I lacked the tools to create something amazing :(</h2>
-        </div>
-
-
-        <div class="illustration2">
-            <img class="image" src="images/ideas.svg" alt="Ideas" border="0">
-        </div>
-
-        <div class="coding">
-            <h1>So I started learning HTML and CSS</h1>
-            <h2>And I am using this website to show my skills</h2>
-        </div>
-
-
-        <div class="illustration3">
-            <img class="image" src="images/coding.svg" alt="Coding" border="0">
-        </div>
-    </div>
-    
-<!-- Took the socials div out of the container to center it with flexbox -->
-    <div class="socials">
-        <div class="codepen">
-            <i class="fab fa-codepen fa-5x"></i>
+        <div id="codepen" class="socials">
+            <i class="fab fa-codepen fa-3x"></i>
             <p>CodePen</p>
         </div>
-        <div class="github">
-            <i class="fab fa-github fa-5x"></i>
+
+        <div id="github" class="socials">
+            <i class="fab fa-github fa-3x"></i>
             <p>GitHub</p>
         </div>
-        <div class="instagram">
-            <i class="fab fa-instagram fa-5x"></i>
-            <p>Instagram</p>
-          </div>
+
+        <div id="reddit" class="socials">
+            <i class="fab fa-reddit-alien fa-3x"></i>
+            <p>Reddit</p>
+        </div>
+
     </div>
-
-    <footer>
-        <p>Hosted on <a href="https://github.com/Jordakoes/Jordakoes.github.io">GitHub</a>, made with <span class="heart">❤</span> in The Netherlands. Licences page  <a href="license.html">click here</a></p>
-    </footer>
-
+    <!-- Personal script loaded here -->
+    <script src="script.js"></script>
 </body>
-
 </html>
