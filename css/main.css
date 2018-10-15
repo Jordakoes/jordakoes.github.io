@@ -4,8 +4,10 @@ html, body {
     margin: 0;
     padding: 0; 
     font-family: 'Raleway', sans-serif;
+    /* To set body to 100% always */
+    overflow-y: auto;
 }
-
+/* Importing the adobe XD svg + setting background */
 body {
     background-color: #202637;
     background-image: url('../images/illustration.svg');
@@ -17,35 +19,37 @@ h1 {
     color: #f2f2f2;
     font-size: 60px;
 }
-
 /* Grid */
 .container {
+    height: 100%;
+    
     display: grid; 
     grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
-    grid-template-rows: 1fr auto;
-    grid-gap: 20px;
+    grid-template-rows: 1fr 3fr 1fr .2fr;
+    grid-gap: 3em;
     grid-template-areas:
     ".  text text text text ."
-    ".  instagram codepen github reddit .";
+    ".  instagram codepen github reddit ."
+    ".  contact contact contact contact ."
+    ".  footer footer footer footer ." ;
 }
 
 .socials {
     display: grid;
     align-self: center;
     justify-self: start;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
+    /* Socials need to be 100% to fill the box */
+    width: 100%;
+    height: 100%;
 }
-
 /* Pushing the fab-icon down a bit */
 i {
     margin-top: 15px;
 }
-
 /* Styling the socials */
 #instagram, #codepen, #github, #reddit{
-    height: 120px;
-    width: 120px;
     background-color: #202637;
     border: 3px solid #f2f2f2;
     border-radius: 8px;
@@ -61,11 +65,10 @@ i {
     text-decoration: none;
     color: #f2f2f2;
 }
-
 /* Grid areas */
 .text {
     grid-area: text;
-    margin-top: 70px;
+    /* margin-top: 70px; */
 }
 
 #instagram {
@@ -84,18 +87,59 @@ i {
     grid-area: reddit;
 }
 
+.contact {
+    grid-area: contact;
+    color: #f2f2f2;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: #f2f2f2;
+    /* border: 3px solid #f2f2f2; */
+    border-radius: 8px;
+    color: #202637;
+}
+
+.contact-container { 
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.contact-btn {
+    height: 2em;
+    width: 10em;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 1.2em;
+    color: #202637;
+    border: 3px solid #202637;
+    background-color: #f2f2f2;
+}
+
+footer {
+    grid-area: footer;
+    font-weight: bold;
+    color: #f2f2f2;
+}
+
+button {
+    border:none;
+}
+
+button:focus {
+    outline:0;
+}
 /* Coloring the span */
 #purple-text {
     color: #F02B67;
 }
-
 /* Hover animations */
 #instagram:hover, #codepen:hover, #github:hover, #reddit:hover {
     transform: scale(1.2);
     cursor: pointer;
     background-color: #F02B67;
 }
-
 /* Typewriter styling */
 .Typewriter__wrapper{
     font-weight: bold;
@@ -105,37 +149,54 @@ i {
 .Typewriter__cursor{
     display: none;
 }
-
 /* Smaller screens */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1100px) {
     .container { 
-    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
-    grid-template-rows: 1fr .5fr .5fr;
+    grid-template-columns: auto 1fr 1fr auto;
+    grid-template-rows: 1fr 1fr 1fr .5fr auto;
+    
     grid-template-areas:
     ". text text ."
     ". instagram codepen ."
-    ". github reddit .";
+    ". github reddit ."
+    ". contact contact ."
+    ". footer footer .";
+    }
+
+    .socials {
+        justify-self: center;
+    }
+
+    .text {
+        display: grid;
+        justify-self: start;
     }
 
     h1 {
-        font-size: 37px;
-        margin-left: 20px;
+        font-size: 70px;
     }
 
     #instagram:hover, #codepen:hover, #github:hover, #reddit:hover {
         transform: scale(1.05);
     }
-
-    .socials {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
 }
-
+/* Phone screens */
 @media screen and (max-width: 600px) {
     h1 {
-        font-size: 29px;
+        font-size: 30px;
+    }
+
+    .container { 
+        grid-template-columns: auto 1fr auto;
+        /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr .5fr; */
+        grid-auto-rows: auto;
+        grid-template-areas:
+        ". text ."
+        ". instagram ."
+        ". codepen ."
+        ". github ."
+        ". reddit ."
+        ". contact ."
+        ". footer .";
     }
 }
