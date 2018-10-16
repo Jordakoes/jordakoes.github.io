@@ -3,7 +3,7 @@ var typewriter = new Typewriter(purple, {
     loop: false
 });
 
-typewriter.typeString('Desinger')
+typewriter.typeString('Designer')
 .pauseFor(1500)
 .deleteAll()
 .typeString('Developer')
