@@ -140,6 +140,7 @@ footer .heart {
 /* Hover animations */
 #instagram:hover, #codepen:hover, #github:hover, #reddit:hover {
     transform: scale(1.05);
+    transition: .3s ease-in-out;
     cursor: pointer;
     background-color: #F02B67;
 }
